@@ -1,6 +1,6 @@
 <template>
   <div class="module-container">
-    <div id="modulo-basa">MÓDULO SERÁ MONTADO AQUI</div>
+    <div id="module-basa">MÓDULO SERÁ MONTADO AQUI</div>
     <div class="foobar">
       <AtButton @click="mountGleba">Montar gleba</AtButton>
       <AtButton @click="mountAnalyze">Montar análises</AtButton>
@@ -27,11 +27,11 @@ export default defineComponent({
     } | null>(null)
 
     const mountGleba = async () => {
-      module.value?.mountWithGleba('#modulo-basa')
+      module.value?.mountWithGleba('#module-basa')
     }
 
     const mountAnalyze = async () => {
-      module.value?.mountWithAnalyzeResults('#modulo-basa')
+      module.value?.mountWithAnalyzeResults('#module-basa')
     }
 
     const unmount = async () => {
@@ -66,6 +66,11 @@ export default defineComponent({
   gap: 10px;
   align-items: center;
 }
+
+#module-basa {
+  width: 100%;
+}
+
 body {
   padding: 0;
   margin: 0;
